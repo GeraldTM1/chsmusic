@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHS Music</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>CHS Music</h1>
+
+    </div>
+
+    <input type="text" class="search-bar" placeholder="Search music...">
+
+    <div class="song-list">
+      <!-- Songs will be dynamically added here -->
+    </div>
+
+    <button onclick="openRequestForm()" class="request-form-btn">Request Form</button>
+
+  </div>
+
+  <div class="play-bar">
+    <div class="control-buttons">
+      <button onclick="skipBackward()"><i class="fas fa-backward"></i></button>
+      <button onclick="togglePlay()"><i class="fas fa-play"></i></button>
+      <button onclick="skipForward()"><i class="fas fa-forward"></i></button>
+    </div>
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+    <input type="range" class="volume-slider" min="0" max="100" value="100" onchange="changeVolume(this.value)">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

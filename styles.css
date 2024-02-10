@@ -1,0 +1,164 @@
+/* CSS styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222; /* Default background color in dark mode */
+  color: #FFFFFF; /* Default text color in dark mode */
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.song-list {
+  overflow-y: auto;
+  max-height: 500px; /* Adjust as needed */
+}
+
+.song {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.song:hover {
+  background-color: #f9f9f9;
+}
+
+.song img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px; /* Rounded corners for the song image */
+}
+
+.song-details {
+  flex: 1;
+}
+
+.play-bar {
+  position: fixed;
+  bottom: 0;
+  right: 0; /* Align to the right side */
+  left: 0; /* Take full width */
+  background-color: #fff; /* Play bar background color */
+  padding: 10px 20px; /* Adjusted padding */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.control-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.volume-slider {
+  -webkit-appearance: none;
+  width: 222px; /* Set the width to your desired size */
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; 
+  background: #222;
+  cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #222;
+  cursor: pointer;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 10px;
+  margin: 0 10px; /* Adjusted margin */
+  position: relative;
+  background-color: #ddd; /* Default background color for progress bar */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  background-color: #222; /* Default fill color for progress bar */
+  width: 0%;
+}
+
+/* Text color on hover */
+.song:hover .song-details {
+  color: #222;
+}
+
+/* Control button styles */
+.control-buttons button {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  transition: transform 0.2s;
+  color: #111;
+}
+
+.control-buttons button:hover {
+  transform: scale(1.2);
+}
+
+.control-buttons button i {
+  padding: 10px;
+}
+
+/* CSS styles for the button */
+.request-form-btn {
+  background-color: #333; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  padding: 10px 20px; /* Button padding */
+  border-radius: 5px; /* Button border radius */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  align-items: center;
+}
+
+.request-form-btn:hover {
+  background-color: #111; /* Button background color on hover */
+}
